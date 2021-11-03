@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package about;
+
+service AboutService {
+  rpc Get (Empty) returns (About) {}
+}
+
+message Empty {}
+
+message About {
+  string device = 1;
+  string msg = 2;
+  float voltage = 3;
+  int32 power = 4;
+  float load = 5;
+  float frequency = 6;
+  bool alarms = 7;
+}

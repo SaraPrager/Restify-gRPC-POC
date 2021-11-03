@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package more;
+
+service MoreService {
+  rpc Get (Empty) returns (More) {}
+}
+
+message Empty {}
+
+message More {
+  string msg = 1;
+  string bank_breaker = 2;
+  string device_mode = 3;
+  float input_frequency = 4;
+  int32 low_transfer_voltage = 5;
+  bool valid_status = 6;
+}
